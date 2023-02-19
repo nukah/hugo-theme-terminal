@@ -30,4 +30,13 @@
       {{ end }}
     {{ end }}
   </ul>
+  {{- if (isset .Site.Params "social") -}}
+    <ul class="navigation-menu__social">
+      {{- range $index, $key := .Site.Params.Social -}}
+        <li>
+          <a href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+        </li>
+      {{- end -}}
+    </ul>
+  {{- end -}}
 </nav>

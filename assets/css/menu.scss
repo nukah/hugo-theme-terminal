@@ -2,7 +2,9 @@
   display: none;
   flex-direction: column;
   $shadow-color: transparentize($background, .2);
-  $shadow: 0 10px $shadow-color, -10px 10px $shadow-color, 10px 10px $shadow-color;
+  $shadow: 0 10px $shadow-color,
+  -10px 10px $shadow-color,
+  10px 10px $shadow-color;
   position: absolute;
   background: $background;
   box-shadow: $shadow;
@@ -37,6 +39,14 @@
     margin: 0;
   }
 
+  &__social {
+    margin: 0 0 0 auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style-type: none;
+  }
+
   &__inner {
     display: flex;
     flex: 1;
@@ -45,7 +55,7 @@
     margin: 0;
     padding: 0;
 
-    > li {
+    >li {
       flex: 0 0 auto;
       margin-bottom: 10px;
       white-space: nowrap;
@@ -94,7 +104,7 @@
       display: flex;
     }
 
-    > li {
+    >li {
       flex: 0 0 auto;
 
       &:not(:last-of-type) {

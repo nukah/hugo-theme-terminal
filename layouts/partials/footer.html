@@ -18,6 +18,9 @@
 {{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
 
 <script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+{{- if (isset .Site.Params "social") -}}
+  <script>feather.replace()</script>
+{{- end -}}
 
 <!-- Extended footer section-->
 {{ partial "extended_footer.html" . }}
